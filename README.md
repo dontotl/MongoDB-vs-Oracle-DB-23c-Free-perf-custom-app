@@ -469,11 +469,11 @@ $ sudo firewall-cmd --reload
 
 유저 50으로 1초간격으로 부하를 줍니다. 
 
-![Untitled](MongoDB%20vs%20Oracle%20DB%2023c%20Free%20%EC%84%B1%EB%8A%A5%20%EB%B6%80%ED%95%98%20(1)%2000aa57d206ff4f4ebef5f32cce4fc898/Untitled.png)
+![Untitled](src/Untitled.png)
 
 Oracle Insert 부하결과 입니다. 
 
-![Untitled](MongoDB%20vs%20Oracle%20DB%2023c%20Free%20%EC%84%B1%EB%8A%A5%20%EB%B6%80%ED%95%98%20(1)%2000aa57d206ff4f4ebef5f32cce4fc898/Untitled%201.png)
+![Untitled](src/Untitled%201.png)
 
 부하 테스트용 스크립트를 작성합니다.  테스트할 시나리오만 주석해제 하고 수행합니다. 
 
