@@ -1,7 +1,7 @@
 # MongoDB vs Oracle DB 23c Free 성능 부하
 
 ## OVERVIEW
-
+본 문서는 전적으로 개인적인 테스트 목적으로 작성된 것이며, 어떠한 경우에도 소속 회사와 관련이 없음을 명확히 합니다
 MongoDB 컬렉션과 오라클 DB 23c 의 JSON 타입 컬렉션을 구성하고, Insert, Select 부하에 대한 성능을 비교 합니다. 
 
 테스트 환경의 VM 정보는 다음과 같습니다. 
