@@ -493,19 +493,19 @@ ocisampleweb) [opc@oci-demo-app ocisampleweb]$ locust
 
 유저 50으로 1초간격으로 부하를 줍니다. 
 
-![Untitled](MongoDB%20vs%20Oracle%20DB%2023c%20Free%20%EC%84%B1%EB%8A%A5%20%EB%B6%80%ED%95%98%20(1)%2000aa57d206ff4f4ebef5f32cce4fc898/Untitled.png)
+![Untitled](MongoDB vs Oracle DB 23c Free perf custom app/Untitled.png)
 
 MongoDB Insert 부하결과 입니다.
 
-![Untitled](MongoDB%20vs%20Oracle%20DB%2023c%20Free%20%EC%84%B1%EB%8A%A5%20%EB%B6%80%ED%95%98%20(1)%2000aa57d206ff4f4ebef5f32cce4fc898/Untitled%202.png)
+![Untitled](MongoDB vs Oracle DB 23c Free perf custom app/Untitled%202.png)
 
 Oracle Select 부하입니다.
 
-![Untitled](MongoDB%20vs%20Oracle%20DB%2023c%20Free%20%EC%84%B1%EB%8A%A5%20%EB%B6%80%ED%95%98%20(1)%2000aa57d206ff4f4ebef5f32cce4fc898/Untitled%203.png)
+![Untitled](MongoDB vs Oracle DB 23c Free perf custom app/Untitled%203.png)
 
 MongoDB Select 부하입니다. 
 
-![Untitled](MongoDB%20vs%20Oracle%20DB%2023c%20Free%20%EC%84%B1%EB%8A%A5%20%EB%B6%80%ED%95%98%20(1)%2000aa57d206ff4f4ebef5f32cce4fc898/Untitled%204.png)
+![Untitled](MongoDB vs Oracle DB 23c Free perf custom app/Untitled%204.png)
 
 기본 설치 환경에서 Insert 부하는 오라클 RPS (request per second) 429 vs MongoDB RPS 433으로 유사했으며, Select 부하는 Oracle DB이 509, Mongo가 430으로 OracleDB가 빨랐습니다. 
 
