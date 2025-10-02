@@ -1,4 +1,4 @@
-# MongoDB vs Oracle DB 23c Free 성능 부하 (1)
+# MongoDB vs Oracle DB 23c Free 성능 부하
 
 ## OVERVIEW
 
