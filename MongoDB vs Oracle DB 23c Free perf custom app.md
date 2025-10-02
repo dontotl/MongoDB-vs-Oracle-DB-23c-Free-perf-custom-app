@@ -493,19 +493,19 @@ ocisampleweb) [opc@oci-demo-app ocisampleweb]$ locust
 
 유저 50으로 1초간격으로 부하를 줍니다. 
 
-![Untitled](MongoDB vs Oracle DB 23c Free perf custom app/Untitled.png)
+![Untitled](src/Untitled.png)
 
 MongoDB Insert 부하결과 입니다.
 
-![Untitled](MongoDB vs Oracle DB 23c Free perf custom app/Untitled%202.png)
+![Untitled](src/Untitled%202.png)
 
 Oracle Select 부하입니다.
 
-![Untitled](MongoDB vs Oracle DB 23c Free perf custom app/Untitled%203.png)
+![Untitled](src/Untitled%203.png)
 
 MongoDB Select 부하입니다. 
 
-![Untitled](MongoDB vs Oracle DB 23c Free perf custom app/Untitled%204.png)
+![Untitled](src/Untitled%204.png)
 
 
 <끝>
