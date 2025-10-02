@@ -507,10 +507,5 @@ MongoDB Select 부하입니다.
 
 ![Untitled](MongoDB vs Oracle DB 23c Free perf custom app/Untitled%204.png)
 
-기본 설치 환경에서 Insert 부하는 오라클 RPS (request per second) 429 vs MongoDB RPS 433으로 유사했으며, Select 부하는 Oracle DB이 509, Mongo가 430으로 OracleDB가 빨랐습니다. 
-
-대량 부하 환경에서는 오라클 JSON성능이 다음과 같이 좋습니다. 
-
-[https://www.oracle.com/a/ocom/docs/oracle-autonomous-json-takes-on-document-dbs.pdf](https://www.oracle.com/a/ocom/docs/oracle-autonomous-json-takes-on-document-dbs.pdf)
 
 <끝>
