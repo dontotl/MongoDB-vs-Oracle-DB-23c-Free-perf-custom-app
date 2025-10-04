@@ -7,10 +7,10 @@ MongoDB 컬렉션과 오라클 DB 23c 의 JSON 타입 컬렉션을 구성하고,
 
 테스트 환경의 VM 정보는 다음과 같습니다. 
 
-| VM | 용도 | Shape | Private IP | Public IP |
+| VM | 용도 | Shape | Private IP | 
 | --- | --- | --- | --- | --- |
-| oci-demo-db | DB 서버 | VM.Standard.E4.Flex 1 OCPU, 16GB Mem | 10.0.1.18 |  |
-| oci-demo-app | APP 서버 | VM.Standard.E4.Flex 1 OCPU, 16GB Mem | 10.0.0.70 | 138.2.47.72 |
+| oci-demo-db | DB 서버 | VM.Standard.E4.Flex 1 OCPU, 16GB Mem | 10.0.1.18 |
+| oci-demo-app | APP 서버 | VM.Standard.E4.Flex 1 OCPU, 16GB Mem | 10.0.0.70 | 
 
 ### DB 구성
 
