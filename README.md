@@ -14,6 +14,7 @@ MongoDB 컬렉션과 오라클 DB 23c 의 JSON 타입 컬렉션을 구성하고,
 | oci-demo-db | DB 서버 | VM.Standard.E4.Flex 1 OCPU, 16GB Mem | 10.0.1.18 |
 | oci-demo-app | APP 서버 | VM.Standard.E4.Flex 1 OCPU, 16GB Mem | 10.0.0.70 | 
 
+<br>
 ### DB 구성
 
 <br>
