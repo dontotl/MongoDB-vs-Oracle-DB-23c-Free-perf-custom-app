@@ -25,6 +25,7 @@ MongoDB 를 구성합니다.
 
  참조 URL : [https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/)
 
+
 <br>
 YUM리파지토리를 생성합니다. 
 
@@ -37,6 +38,7 @@ gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-6.0.asc
 ```
+
 <br>
 YUM으로 MongoDB를 설치합니다. 
 
@@ -47,6 +49,7 @@ $ sudo yum install -y mongodb-org
 
 Complete!
 ```
+
 <br>
 MongoDB 를 서비스로 등록합니다. 
 
@@ -55,6 +58,7 @@ $ sudo systemctl start mongod
 $ sudo systemctl enable mongod
 $ sudo systemctl status mongod
 ```
+
 <br>
 MongoDB 서비스에 접속해  봅니다. 
 
@@ -72,6 +76,7 @@ You can opt-out by running the disableTelemetry() command.
 
 test>
 ```
+
 <br>
 admin 유저를 추가해 줍니다.
 
@@ -82,6 +87,7 @@ admin> db.createUser({ user: 'mongo', pwd: 'mongo', roles: ['root'] })
 { ok: 1 }
 admin> exit
 ```
+
 <br>
 외부 접속을 위한 설정을 해줍니다. 
 
@@ -92,12 +98,14 @@ $ sudo vi /etc/mongod.conf
   bindIp: 0.0.0.0  # Enter 0.0.0.0,:: to bind to all IPv4 and IPv6 addresses or, alternatively, use the net.bindIpAll setting.
 
 ```
+
 <br>
 MongoDB  서비스를 재기동합니다. 
 
 ```jsx
 $ sudo systemctl restart mongod
 ```
+
 <br>
 Oracle DB 23c Free - Developer Release를 설치합니다.
 
@@ -110,6 +118,7 @@ $ sudo wget https://download.oracle.com/otn-pub/otn_software/db-free/oracle-data
 
 $ sudo yum -y install oracle-database-free-23c-1.0-1.el8.x86_64.rpm
 ```
+
 <br>
 configure를 실행해 DB를 생성합니다. 패스워드는 TESTdb##01을 씁니다.
 
@@ -158,6 +167,7 @@ Connect to Oracle Database using one of the connect strings:
      Pluggable database: oci-demo-msadb/FREEPDB1
      Multitenant container database: oci-demo-msadb
 ```
+
 <br>
 DB에 접속하여 PDB를 만들어 줍니다.
 
@@ -180,6 +190,7 @@ SQL> alter pluggable database testdb save state;
 
 SQL> exit
 ```
+
 <br>
 Linux방화벽에 TCP 1521, 27017 포트를 추가합니다.
 
@@ -190,10 +201,12 @@ $ sudo firewall-cmd --zone=public --permanent --add-port=27017/tcp
 
 $ sudo firewall-cmd --reload
 ```
+
 <br>
  OCI Security List 등록을 합니다. 1521, 27017 TCP 포트를 오픈합니다.
 
 ### 테스트APP 환경 구성
+
 
 <br>
 파이썬 환경을 구성합니다. 버전은 Python 3을 사용합니다. 
@@ -202,6 +215,7 @@ $ sudo firewall-cmd --reload
 $ python -V
 Python 3.6.8
 ```
+
 <br>
 파이썬 가상환경을 만들어 줍니다. 
 
@@ -210,6 +224,7 @@ $ mkdir venvs
 $ cd venvs
 $ python -m venv oravsmongo
 ```
+
 <br>
 가상환경에 진입합니다. 
 
@@ -218,6 +233,7 @@ $ cd oravsmongo/bin/
 $ source activate
 (oravsmongo) [opc@oci-demo-app bin]$
 ```
+
 <br>
 Flask, pymongo설치 및 pip를 업그레이드 합니다. 
 
@@ -236,8 +252,10 @@ $ sudo firewall-cmd --zone=public --permanent --add-port=5000/tcp
 
 $ sudo firewall-cmd --reload
 ```
+
 <br>
 oci-demp-app 서버에 DB 접속용 클라이언트를 셋업해 줍니다. 
+
 <br>
 YUM리파지토리를 생성합니다. 
 
@@ -260,6 +278,7 @@ $ sudo yum install mongodb-mongosh
 
 Complete!
 ```
+
 <br>
 MongoDB에 접속해 봅니다. 
 
@@ -278,6 +297,7 @@ You can opt-out by running the disableTelemetry() command.
 
 test> exit
 ```
+
 <br>
 오라클 DB클라이언트를 셋업하고 DB접속을 확인 합니다. 
 
@@ -308,8 +328,10 @@ Version 23.2.0.0.0
 
 SQL> exit
 ```
+
 <br>
 오라클 DB 테이블 생성
+
 <br>
 testdb에 sample.sql을 만들고 테이블을 생성합니다.
 
@@ -333,6 +355,7 @@ SQL> exit
 
 <br>
 간단하게 각 DB에  JSON 다큐먼트 스토어를 만들고, 1건을 Insert하고 1건을 Select 하는 앱을 만듭니다.
+
 <br>
 Flask [sampleapp.py](http://sample-monolith.py) 을 만듭니다. 
 
@@ -415,6 +438,7 @@ def oracle_query():
         logger.error(e)
     return str(oradb_results)
 ```
+
 <br>
 oci-demo-app 터미널을 하나 더 열어서, Linux 방화벽에도 TCP 5000 포트를 추가하고, OCI Security List에도 추가해 줍니다. 
 
@@ -432,12 +456,14 @@ $ sudo firewall-cmd --reload
 ```python
 (oravsmongo) [opc@oci-demo-app oravsmongo]$ pip install gunicorn
 ```
+
 <br>
 부하테스트 도구인 locust를 설치합니다. 
 
 ```python
 (oravsmongo) [opc@oci-demo-app oravsmongo]$ pip install locust
 ```
+
 <br>
 부하 테스트용 스크립트를 작성합니다.  테스트할 시나리오만 주석해제 하고 수행합니다. 
 
@@ -454,12 +480,14 @@ class User(HttpUser):
 #        self.client.get("/mongo/select")
 
 ```
+
 <br>
 gunicorn을 백그라운로 수행합니다. 
 
 ```python
 (oravsmongo) [opc@oci-demo-app oravsmongo]$ gunicorn --workers=2 sampleapp:app -b 0.0.0.0:5000 &
 ```
+
 <br>
 locust로 부하를 수행합니다.
 
@@ -467,6 +495,7 @@ locust로 부하를 수행합니다.
 (oravsmongo) [opc@oci-demo-app oravsmongo]$ sudo ulimit -n 2048
 (oravsmongo) [opc@oci-demo-app oravsmongo]$ locust
 ```
+
 <br>
 oci-demo-app 터미널을 하나 더 열어서, Linux 방화벽에도 TCP 8089 포트를 추가하고, OCI Security List에도 추가해 줍니다. 
 
@@ -475,14 +504,17 @@ $ sudo firewall-cmd --zone=public --permanent --add-port=8089/tcp
 
 $ sudo firewall-cmd --reload
 ```
+
 <br>
 유저 50으로 1초간격으로 부하를 줍니다. 
 
 ![Untitled](src/Untitled.png)
+
 <br>
 Oracle Insert 부하결과 입니다. 
 
 ![Untitled](src/Untitled%201.png)
+
 <br>
 부하 테스트용 스크립트를 작성합니다.  테스트할 시나리오만 주석해제 하고 수행합니다. 
 
