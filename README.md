@@ -9,10 +9,10 @@ MongoDB 컬렉션과 오라클 DB 23c 의 JSON 타입 컬렉션을 구성하고,
 <br>
 테스트 환경의 VM 정보는 다음과 같습니다. 
 
-| VM | 용도 | Shape | Private IP | 
-| --- | --- | --- | --- | 
-| oci-demo-db | DB 서버 | VM.Standard.E4.Flex 1 OCPU, 16GB Mem | 10.0.1.18 |
-| oci-demo-app | APP 서버 | VM.Standard.E4.Flex 1 OCPU, 16GB Mem | 10.0.0.70 | 
+| VM | 용도 | Shape |
+| --- | --- | --- | 
+| oci-demo-db | DB 서버 | VM 1 CPU, 16GB Mem | 
+| oci-demo-app | APP 서버 | VM 1 CPU, 16GB Mem | 
 
 <br>
 
@@ -120,7 +120,7 @@ $ sudo yum -y install oracle-database-free-23c-1.0-1.el8.x86_64.rpm
 ```
 
 <br>
-configure를 실행해 DB를 생성합니다. 패스워드는 TESTdb##01을 씁니다.
+configure를 실행해 DB를 생성합니다. 
 
 ```python
 $ sudo /etc/init.d/oracle-free-23c configure
